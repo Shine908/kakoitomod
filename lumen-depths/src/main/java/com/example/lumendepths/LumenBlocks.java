@@ -27,19 +27,19 @@ public static final Block AURORA_ORE = new Block(ore(MapColor.BLUE)
 public static final Block LUMEN_CRYSTAL_BLOCK = new Block(AbstractBlock.Settings.create()
 .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
 .strength(4.0f).requiresTool().nonOpaque()
-.sounds(BlockSoundGroup.AMETHIST_BLOCK)
+.sounds(BlockSoundGroup.AMETHYST_BLOCK)
 .luminance(state -> 12));
 
 public static final Block AURORA_CRYSTAL_BLOCK = new Block(AbstractBlock.Settings.create()
 .mapColor(MapColor.TERRACOTTA_PURPLE)
 .strength(4.0f).requiresTool().nonOpaque()
-.sounds(BlockSoundGroup.AMETHIST_BLOCK)
+.sounds(BlockSoundGroup.AMETHYST_BLOCK)
 .luminance(state -> 15));
 
 public static final Block LUMEN_CRYSTAL_CLUSTER = new Block(AbstractBlock.Settings.create()
 .mapColor(MapColor.TERRACOTTA_LIGHT_BLUE)
 .strength(2.0f).requiresTool().nonOpaque()
-.sounds(BlockSoundGroup.AMETHIST_BLOCK)
+.sounds(BlockSoundGroup.AMETHYST_BLOCK)
 .luminance(state -> 10));
 
 public static final Block CRYSTAL_BRICKS = new Block(AbstractBlock.Settings.create()

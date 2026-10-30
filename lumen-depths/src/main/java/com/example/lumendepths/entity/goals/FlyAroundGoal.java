@@ -64,7 +64,6 @@ this.entity.setYaw((float) Math.toDegrees(-Math.atan2(move.x, move.z)));
 this.entity.setPitch((float) Math.toDegrees(-Math.atan2(move.y, Math.hypot(move.x, move.z))));
 }
 
-@Override
 public void end() {
 this.target = null;
 }

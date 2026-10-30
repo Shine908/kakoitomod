@@ -11,6 +11,7 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -19,7 +20,7 @@ import net.minecraft.world.World;
 /**
  * Crystal Beetle: a slow, shy passive ground creature of the Lumen Caves.
  */
-public class CrystalBeetleEntity extends MobEntity {
+public class CrystalBeetleEntity extends PathAwareEntity {
 
 public CrystalBeetleEntity(EntityType<? extends CrystalBeetleEntity> type, World world) {
 super(type, world);

@@ -56,7 +56,7 @@ public static final Item CRYSTAL_BEETLE_SPAWN_EGG = registerEgg("crystal_beetle_
 public static final Item SHARD_WRAITH_SPAWN_EGG = registerEgg("shard_wraith_spawn_egg", SHARD_WRAITH, 0x1A1A3E, 0x4DEEEA);
 public static final Item GLOOM_MAW_SPAWN_EGG = registerEgg("gloom_maw_spawn_egg", GLOOM_MAW, 0x2B1B3D, 0xD94FFF);
 
-private static <T extends net.minecraft.entity.Entity> Item registerEgg(
+private static <T extends net.minecraft.entity.mob.MobEntity> Item registerEgg(
 String name, EntityType<T> type, int primary, int secondary) {
 return Registry.register(Registries.ITEM, id(name),
 new SpawnEggItem(type, primary, secondary, new Item.Settings()));

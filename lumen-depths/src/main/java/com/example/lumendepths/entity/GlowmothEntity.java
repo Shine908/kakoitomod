@@ -43,7 +43,7 @@ super.tick();
 if (!this.getWorld().isClient()) {
 this.setNoGravity(true);
 // Occasionally emit a soft glow particle while flying.
-if (this.age % 25 == 0 && !this.getVelocity().isZero()) {
+if (this.age % 25 == 0 && !this.getVelocity().equals(net.minecraft.util.math.Vec3d.ZERO)) {
 ((net.minecraft.server.world.ServerWorld) this.getWorld())
 .spawnParticles(ParticleTypes.END_ROD,
 this.getX(), this.getY() + 0.3, this.getZ(), 1, 0.1, 0.1, 0.1, 0.0);

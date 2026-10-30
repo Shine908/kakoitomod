@@ -82,4 +82,14 @@ public class ShardWraithModel extends EntityModel<ShardWraithEntity> {
 		this.shards.yaw = ageInTicks * 0.25f;
 		this.body.pitch = 0.05f + MathHelper.sin(ageInTicks * 0.15f) * 0.03f;
 	}
+
+
+	@Override
+	public void render(net.minecraft.client.util.math.MatrixStack matrixStack, net.minecraft.client.render.VertexConsumer vertexConsumer, int light, int overlay, int color) {
+		this.body.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.head.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.armL.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.armR.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.shards.render(matrixStack, vertexConsumer, light, overlay, color);
+	}
 }

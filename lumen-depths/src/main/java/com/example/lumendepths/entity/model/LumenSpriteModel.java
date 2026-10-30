@@ -63,4 +63,12 @@ public class LumenSpriteModel extends EntityModel<LumenSpriteEntity> {
 		this.body.yaw = netHeadYaw * MathHelper.RADIANS_PER_DEGREE;
 		this.body.pitch = headPitch * MathHelper.RADIANS_PER_DEGREE;
 	}
+
+
+	@Override
+	public void render(net.minecraft.client.util.math.MatrixStack matrixStack, net.minecraft.client.render.VertexConsumer vertexConsumer, int light, int overlay, int color) {
+		this.body.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.tendrilL.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.tendrilR.render(matrixStack, vertexConsumer, light, overlay, color);
+	}
 }

@@ -12,6 +12,7 @@ import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 /**
@@ -56,8 +57,8 @@ if (target != null && target.isAlive() && this.contactAttackCooldown == 0
 && this.distanceTo(target) < 1.6) {
 if (target.damage(this.getWorld().getDamageSources().mobAttack(this),
 (float) this.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE))) {
-target.knockback(0.4,
-this.getX() - target.getX(), this.getZ() - target.getZ());
+Vec3d push = target.getPos().subtract(this.getPos()).normalize().multiply(0.4);
+target.setVelocity(push.x, 0.25, push.z);
 }
 this.contactAttackCooldown = 30;
 }

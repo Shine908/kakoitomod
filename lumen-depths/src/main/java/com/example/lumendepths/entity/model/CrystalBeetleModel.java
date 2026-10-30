@@ -80,4 +80,13 @@ public class CrystalBeetleModel extends EntityModel<CrystalBeetleEntity> {
 		this.legL.roll = swing;
 		this.legR.roll = -swing;
 	}
+
+
+	@Override
+	public void render(net.minecraft.client.util.math.MatrixStack matrixStack, net.minecraft.client.render.VertexConsumer vertexConsumer, int light, int overlay, int color) {
+		this.body.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.head.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.legL.render(matrixStack, vertexConsumer, light, overlay, color);
+		this.legR.render(matrixStack, vertexConsumer, light, overlay, color);
+	}
 }
