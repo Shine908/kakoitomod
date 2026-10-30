@@ -1,4 +1,4 @@
-# Lumen Depths — Build Notes (v2.0.0)
+# Lumen Depths — Build Notes (v2.1.0)
 
 ## Used versions (final, verified by a successful build)
 | Component        | Version                | Source of truth |
@@ -10,8 +10,8 @@
 | Java             | 21 (Eclipse Temurin)   | toolchain / `options.release = 21` |
 | Fabric Loom      | 1.10.1                 | plugins block in build.gradle |
 | Gradle wrapper   | 8.14.3                 | gradle/wrapper/gradle-wrapper.properties |
-| Mod version      | 2.0.0                  | mod_version property |
-| Artifact         | `build/libs/lumen-depths-2.0.0.jar` | |
+| Mod version      | 2.1.0                  | mod_version property |
+| Artifact         | `build/libs/lumen-depths-2.1.0.jar` | |
 
 ## Deviations from the original spec and why
 1. **Gradle 8.14.3 instead of 8.8.** Fabric Loom 1.10.x requires Gradle >= 8.12; using 8.8 fails during plugin configuration. 8.14.3 satisfies "8.8 or newer".
@@ -20,12 +20,12 @@
 4. **Yarn 1.21.1 specifics applied:** `GoalSelector.add(int, Goal)` (not `addGoal`), `ModelPart` fields `pitch/yaw/roll/xScale/yScale/zScale`, textures/IDs via `Identifier.of(...)`, loot tables under `data/<ns>/loot_table/` and recipes under `data/<ns>/recipe/` (singular folders in 1.21.1).
 5. Data files (recipes, loot tables, tags) are produced by an in-mod **datagen** entrypoint (`fabric-datagen`) and committed as static JSON resources so the jar is self-contained.
 
-## What was fixed in 2.0.0
+## What was fixed in 2.1.0
 - **Lumen Lantern is now a real block** (`block/LumenLanternBlock` extends vanilla `LanternBlock`): places on floor, hangs under ceilings (`hanging=true/false` blockstate), waterloggable, light level 15, pickaxe-minable, drops itself. `/give @p lumen_depths:lumen_lantern` gives a placeable glowing lantern. Registered in `Registries.BLOCK` + BlockItem with the same ID `lumen_lantern` (old fake item replaced; registry ID preserved).
 - **Crystal Snail texture/model rebuilt**: simplified TexturedModelData (body base + shell + antennae), strict 64x64 UV layout inside a freshly generated 64x64 RGBA PNG; renderer returns `lumen_depths:textures/entity/crystal_snail.png`.
 - **Glowmoth actually flies**: no-gravity ambient mob with custom `FlyAroundGoal` (random cave waypoints, visible speed), `SwimGoal`, `LookAroundGoal`; attributes MAX_HEALTH 6, MOVEMENT_SPEED 0.2, FLYING_SPEED 0.6.
 
-## What was added in 2.0.0
+## What was added in 2.1.0
 - **Biome `lumen_caves` ("Lumen Caves" / "Светозарные пещеры")**: JSON worldgen biome (temperature 0.5, no precipitation, teal-violet fog, glowing cold water colors), spawns AMBIENT (glowmoth, lumen_sprite), CREATURE (crystal_snail, crystal_beetle), MONSTER (shard_wraith, gloom_maw). Ore/decor features placed across overworld generation via JSON placed features + `BiomeModifications`.
 - **Blocks (8)**: `lumen_ore`, `deepslate_lumen_ore`, `aurora_ore`, `lumen_crystal_block` (light 12), `aurora_crystal_block` (light 15), `lumen_crystal_cluster` (cutout model, light 8), `crystal_bricks`, `lumen_lantern`. Each has block model, item model, blockstate, texture, loot table, pickaxe/needs_stone_tool tags entries.
 - **Items**: `aurora_gem`, `crystal_dust`, `gloom_fang` (+ models, textures, localization, creative tab).
@@ -38,13 +38,13 @@
 ```bash
 cd lumen-depths
 JAVA_HOME=/path/to/jdk21 ./gradlew build --stacktrace --no-daemon
-# output: build/libs/lumen-depths-2.0.0.jar
+# output: build/libs/lumen-depths-2.1.0.jar
 ```
 Requires JDK 21 and internet on first run (Minecraft/Mojang/Fabric downloads; afterwards cached in `.gradle/loom-cache`).
 
 ## How to install into a client
 1. Install a Fabric profile for Minecraft 1.21.1 (loader >= 0.19.5).
-2. Copy into `.minecraft/mods`: `lumen-depths-2.0.0.jar` and `fabric-api-0.116.17+1.21.1.jar`.
+2. Copy into `.minecraft/mods`: `lumen-depths-2.1.0.jar` and `fabric-api-0.116.17+1.21.1.jar`.
 3. Launch. The "Lumen Depths" creative tab contains everything.
 
 ## How to verify the fixes
@@ -73,5 +73,5 @@ Requires JDK 21 and internet on first run (Minecraft/Mojang/Fabric downloads; af
 - `lumen_crystal_cluster` is a simple floor-placed cutout block (wall/ceiling multi-placement omitted for stability).
 - Natural mob spawning relies on BiomeModifications weight tuning; exact spawn rates may need balancing per playtest.
 
-## Hotfix 2.0.0 (registry load crash)
+## Hotfix 2.1.0 (registry load crash)
 - Исправлен краш "Failed to load registries": в configured_feature ошибочный `minecraft:block_matcher` → `minecraft:block_match`; в lumen_crystal_cluster_patch `minecraft:single_provider` → `minecraft:simple_state_provider` (+ inline state); из биома удалён несуществующий карвер `minecraft:cave_z` (остались cave, canyon). Все JSON в JAR провалидированы программно.
