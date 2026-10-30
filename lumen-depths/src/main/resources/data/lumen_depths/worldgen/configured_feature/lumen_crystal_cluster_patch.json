@@ -2,12 +2,9 @@
   "type": "minecraft:simple_block",
   "config": {
     "to_place": {
-      "type": "minecraft:single_provider",
-      "provider": {
-        "type": "minecraft:single_state",
-        "state": {
-          "Name": "lumen_depths:lumen_crystal_cluster"
-        }
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "lumen_depths:lumen_crystal_cluster"
       }
     }
   }

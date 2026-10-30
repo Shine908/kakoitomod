@@ -72,3 +72,6 @@ Requires JDK 21 and internet on first run (Minecraft/Mojang/Fabric downloads; af
 - Sounds reuse vanilla sound events; no custom sound files.
 - `lumen_crystal_cluster` is a simple floor-placed cutout block (wall/ceiling multi-placement omitted for stability).
 - Natural mob spawning relies on BiomeModifications weight tuning; exact spawn rates may need balancing per playtest.
+
+## Hotfix 2.0.0 (registry load crash)
+- Исправлен краш "Failed to load registries": в configured_feature ошибочный `minecraft:block_matcher` → `minecraft:block_match`; в lumen_crystal_cluster_patch `minecraft:single_provider` → `minecraft:simple_state_provider` (+ inline state); из биома удалён несуществующий карвер `minecraft:cave_z` (остались cave, canyon). Все JSON в JAR провалидированы программно.

@@ -6,7 +6,7 @@
     "targets": [
       {
         "target": {
-          "predicate_type": "minecraft:block_matcher",
+          "predicate_type": "minecraft:block_match",
           "block": "deepslate"
         },
         "state": {
