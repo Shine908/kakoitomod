@@ -1,0 +1,11 @@
+{
+  "itemGroup.lumen_depths.main": "Lumen Depths",
+  "item.lumen_depths.lumen_shard": "Lumen Shard",
+  "item.lumen_depths.wisp_essence": "Wisp Essence",
+  "item.lumen_depths.aurora_fruit": "Aurora Fruit",
+  "item.lumen_depths.lumen_lantern": "Lumen Lantern",
+  "item.lumen_depths.glowmoth_spawn_egg": "Glowmoth Spawn Egg",
+  "item.lumen_depths.crystal_snail_spawn_egg": "Crystal Snail Spawn Egg",
+  "entity.lumen_depths.glowmoth": "Glowmoth",
+  "entity.lumen_depths.crystal_snail": "Crystal Snail"
+}

@@ -1,0 +1,11 @@
+{
+  "itemGroup.lumen_depths.main": "Lumen Depths",
+  "item.lumen_depths.lumen_shard": "Светозарный осколок",
+  "item.lumen_depths.wisp_essence": "Эссенция светлячка",
+  "item.lumen_depths.aurora_fruit": "Авроровый фрукт",
+  "item.lumen_depths.lumen_lantern": "Светозарный фонарь",
+  "item.lumen_depths.glowmoth_spawn_egg": "Яйцо призыва светозарного мотылька",
+  "item.lumen_depths.crystal_snail_spawn_egg": "Яйцо призыва кристальной улитки",
+  "entity.lumen_depths.glowmoth": "Светозарный мотылёк",
+  "entity.lumen_depths.crystal_snail": "Кристальная улитка"
+}
