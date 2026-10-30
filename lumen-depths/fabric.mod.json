@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "lumen_depths",
+  "version": "2.0.0",
+  "name": "Lumen Depths",
+  "description": "Adds glowing items, blocks, ores, the Lumen Caves biome and mobs: Glowmoth, Crystal Snail, Lumen Sprite, Crystal Beetle, Shard Wraith, Gloom Maw.",
+  "license": "MIT",
+  "icon": "assets/lumen_depths/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.lumendepths.LumenDepthsMod"
+    ],
+    "client": [
+      "com.example.lumendepths.client.LumenDepthsClient"
+    ],
+    "fabric-datagen": [
+      "com.example.lumendepths.datagen.DatagenEntrypoint"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "fabric-api": "*",
+    "minecraft": "~1.21.1",
+    "java": ">=21"
+  }
+}
