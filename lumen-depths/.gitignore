@@ -1,2 +1,5 @@
 .gradle/
 build/
+
+# Release artifact (committed on purpose so the built JAR is visible in the repo)
+!build/libs/lumen-depths-1.0.0.jar
