@@ -16,7 +16,24 @@ repositories {
 }
 
 loom {
-	// no special config needed
+	runs {
+		datagen {
+			inherit client
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=lumen_depths"
+			runDir "build/datagen"
+		}
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDir 'src/main/generated'
+		}
+	}
 }
 
 processResources {

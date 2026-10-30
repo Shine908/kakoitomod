@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "lumen_depths:block/lumen_lantern"
+    },
+    "hanging=true": {
+      "model": "lumen_depths:block/lumen_lantern_hanging"
+    }
+  }
+}

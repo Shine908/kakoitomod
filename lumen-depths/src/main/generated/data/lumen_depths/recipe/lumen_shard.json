@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "lumen_depths:lumen_crystal_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "lumen_depths:lumen_shard"
+  }
+}

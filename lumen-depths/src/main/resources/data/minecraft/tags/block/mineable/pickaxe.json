@@ -1,0 +1,11 @@
+{
+  "values": [
+    "lumen_depths:lumen_ore",
+    "lumen_depths:deepslate_lumen_ore",
+    "lumen_depths:aurora_ore",
+    "lumen_depths:lumen_crystal_block",
+    "lumen_depths:aurora_crystal_block",
+    "lumen_depths:crystal_bricks",
+    "lumen_depths:lumen_lantern"
+  ]
+}

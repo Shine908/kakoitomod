@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "lumen_depths:lumen_shard"
+    },
+    "/": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "/",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "lumen_depths:lumen_lantern"
+  }
+}

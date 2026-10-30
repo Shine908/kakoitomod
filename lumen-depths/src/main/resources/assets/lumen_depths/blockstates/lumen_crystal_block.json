@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lumen_depths:block/lumen_crystal_block"
+    }
+  }
+}
