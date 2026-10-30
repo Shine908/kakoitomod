@@ -6,6 +6,11 @@
       "state": {
         "Name": "lumen_depths:lumen_crystal_cluster"
       }
+    },
+    "placing_condition": {
+      "type": "minecraft:matching_blocks",
+      "blocks": "minecraft:air",
+      "offset": [0, -1, 0]
     }
   }
 }

@@ -7,7 +7,16 @@
       {
         "target": {
           "predicate_type": "minecraft:block_match",
-          "block": "deepslate"
+          "block": "minecraft:deepslate"
+        },
+        "state": {
+          "Name": "lumen_depths:aurora_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:tuff"
         },
         "state": {
           "Name": "lumen_depths:aurora_ore"

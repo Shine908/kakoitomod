@@ -27,12 +27,12 @@
   "entity.lumen_depths.shard_wraith": "Осколочный призрак",
   "entity.lumen_depths.gloom_maw": "Мрачная пасть",
   "biome.lumen_depths.lumen_caves": "Светозарные пещеры",
-  "placed_feature.lumen_depths.lumen_ore_upper": "Генерация: Lumen Depths",
-  "configured_feature.lumen_depths.lumen_ore_upper": "Генерация: Lumen Depths",
-  "placed_feature.lumen_depths.lumen_ore_lower": "Генерация: Lumen Depths",
-  "configured_feature.lumen_depths.lumen_ore_lower": "Генерация: Lumen Depths",
   "placed_feature.lumen_depths.aurora_ore_deep": "Генерация: Lumen Depths",
   "configured_feature.lumen_depths.aurora_ore_deep": "Генерация: Lumen Depths",
   "placed_feature.lumen_depths.lumen_crystal_cluster_patch": "Генерация: Lumen Depths",
-  "configured_feature.lumen_depths.lumen_crystal_cluster_patch": "Генерация: Lumen Depths"
+  "configured_feature.lumen_depths.lumen_crystal_cluster_patch": "Генерация: Lumen Depths",
+  "placed_feature.lumen_depths.stone_lumen_ore": "Генерация: Lumen Depths",
+  "configured_feature.lumen_depths.stone_lumen_ore": "Генерация: Lumen Depths",
+  "placed_feature.lumen_depths.deepslate_lumen_ore": "Генерация: Lumen Depths",
+  "configured_feature.lumen_depths.deepslate_lumen_ore": "Генерация: Lumen Depths"
 }

@@ -25,31 +25,16 @@ public class LumenWorldgen {
                 Identifier.of(LumenDepthsMod.MOD_ID, name));
     }
 
+    private static final RegistryKey<net.minecraft.world.biome.Biome> LUMEN_CAVES =
+            RegistryKey.of(RegistryKeys.BIOME, Identifier.of(LumenDepthsMod.MOD_ID, "lumen_caves"));
+
     public static void register() {
-        // ---- Ore veins from JSON placed features ----
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, placed("lumen_ore_upper"));
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, placed("lumen_ore_lower"));
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, placed("aurora_ore_deep"));
-
-        // ---- Mob spawn additions ----
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(
-                        BiomeKeys.DARK_FOREST, BiomeKeys.SPARSE_JUNGLE, BiomeKeys.JUNGLE),
-                SpawnGroup.AMBIENT, LumenEntities.GLOWMOTH, 10, 2, 4);
-        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(),
-                SpawnGroup.AMBIENT, LumenEntities.LUMEN_SPRITE, 6, 1, 3);
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(
-                        BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.MEADOW),
-                SpawnGroup.CREATURE, LumenEntities.CRYSTAL_SNAIL, 4, 2, 3);
-        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(),
-                SpawnGroup.CREATURE, LumenEntities.CRYSTAL_BEETLE, 5, 2, 3);
-        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(),
-                SpawnGroup.MONSTER, LumenEntities.SHARD_WRAITH, 4, 1, 2);
-        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(),
-                SpawnGroup.MONSTER, LumenEntities.GLOOM_MAW, 6, 1, 3);
-
-        LumenDepthsMod.LOGGER.info("[Lumen Depths] World generation hooks registered");
+        // NOTE: no BiomeModifications here. All feature/spawn wiring for the
+        // lumen_caves biome lives in its datapack JSON
+        // (data/lumen_depths/worldgen/biome/lumen_caves.json). Registering
+        // dynamic biome modifications that reference datapack JSON entries
+        // caused a hard "Failed to load registries" crash on world creation
+        // in 1.21.1, so this class intentionally keeps zero runtime hooks.
+        LumenDepthsMod.LOGGER.info("[Lumen Depths] Worldgen is JSON-driven (biome: {})", LUMEN_CAVES.getValue());
     }
 }

@@ -10,26 +10,37 @@
     "grass_color": 5242867,
     "foliage_color": 7929370
   },
-  "carvers": ["minecraft:cave", "minecraft:canyon"],
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:canyon"
+  ],
   "features": [
     [],
     [],
-    ["lumen_depths:lumen_crystal_cluster_patch"],
+    [
+      "lumen_depths:lumen_crystal_cluster_patch"
+    ],
     [],
     [],
     [],
     [
-      "lumen_depths:lumen_ore_upper",
-      "lumen_depths:lumen_ore_lower",
+      "lumen_depths:stone_lumen_ore",
+      "lumen_depths:deepslate_lumen_ore",
       "lumen_depths:aurora_ore_deep"
     ],
     [],
     [],
     [],
-    ["minecraft:lake_lava_underground", "minecraft:lake_lava_surface"],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
     [],
     [],
-    ["minecraft:monster_room", "minecraft:monster_room_deep"],
+    [
+      "minecraft:monster_room",
+      "minecraft:monster_room_deep"
+    ],
     [],
     [],
     [],
@@ -38,16 +49,46 @@
   ],
   "spawners": {
     "monster": [
-      { "type": "lumen_depths:shard_wraith", "weight": 30, "min_count": 1, "max_count": 2 },
-      { "type": "lumen_depths:gloom_maw", "weight": 40, "min_count": 1, "max_count": 3 }
+      {
+        "type": "lumen_depths:shard_wraith",
+        "weight": 30,
+        "min_count": 1,
+        "max_count": 2
+      },
+      {
+        "type": "lumen_depths:gloom_maw",
+        "weight": 40,
+        "min_count": 1,
+        "max_count": 3
+      }
     ],
     "creature": [
-      { "type": "lumen_depths:crystal_beetle", "weight": 30, "min_count": 2, "max_count": 3 },
-      { "type": "lumen_depths:crystal_snail", "weight": 20, "min_count": 2, "max_count": 3 }
+      {
+        "type": "lumen_depths:crystal_beetle",
+        "weight": 30,
+        "min_count": 2,
+        "max_count": 3
+      },
+      {
+        "type": "lumen_depths:crystal_snail",
+        "weight": 20,
+        "min_count": 2,
+        "max_count": 3
+      }
     ],
     "ambient": [
-      { "type": "lumen_depths:glowmoth", "weight": 40, "min_count": 2, "max_count": 4 },
-      { "type": "lumen_depths:lumen_sprite", "weight": 25, "min_count": 1, "max_count": 3 }
+      {
+        "type": "lumen_depths:glowmoth",
+        "weight": 40,
+        "min_count": 2,
+        "max_count": 4
+      },
+      {
+        "type": "lumen_depths:lumen_sprite",
+        "weight": 25,
+        "min_count": 1,
+        "max_count": 3
+      }
     ],
     "axolotls": [],
     "underground_water_creature": [],
